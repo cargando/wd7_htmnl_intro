@@ -1,5 +1,79 @@
+
+* {
+	font-family: 'Montserrat', Arial, sans-serif;
+}
+
+
 h1 {
 	color: peru;
 	text-decoration: underline;
 	font-family: "Apple Braille";
+}
+
+
+.red-border {
+	border: 1px solid red;
+	color: red;
+}
+
+.my-first-class {
+	font-size: 25px;
+	color: blueviolet;
+}
+
+.red-border,.my-first-class,h3 {
+	margin-left: 100px;
+}
+
+#table1 {
+	color: darkorange;
+}
+
+.red-border > span {
+	color: blueviolet;
+}
+
+img[alt*="тик"] {
+	border: 2px dashed green;
+	padding: 5px;
+}
+
+.personal_link:visited {
+	color: darkorange;
+	text-decoration: none;
+}
+
+.personal_link:link {
+	color: darkcyan;
+	text-decoration: underline;
+}
+.personal_link:hover {
+	font-size: 20px;
+}
+
+textarea:focus {
+	color: red;
+}
+
+.mail:invalid {
+	color: red;
+	border: 5px solid red;
+}
+
+ol {
+	list-style-type: upper-roman;
+}
+ol li:nth-child(odd) {
+	background-color: darkgray;
+	color: green;
+
+}
+
+ol li:first-child {
+	font-size: 20px;
+}
+
+ol li:last-child {
+	font-size: 20px;
+	color: darkorange;
 }
