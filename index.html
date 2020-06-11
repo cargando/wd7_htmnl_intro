@@ -9,7 +9,44 @@
 		p {
 			color: red;
 		}
+		.sp1{
+			color: red;
+		}
+		div {
+			color: green;
+		}
 
+		.padding-1 {
+			padding: 20px;
+			border: 2px solid navy;
+		}
+		.padding-2 {
+			padding: 20px 50px;
+			border: 2px solid navy;
+		}
+		.padding-3 {
+			padding: 20px 50px 10px 100px;
+			border: 2px solid navy;
+		}
+
+		.padding-4 {
+			padding-top: 100px;
+			padding-left: 80px;
+			border: 2px solid navy;
+		}
+
+		.padding-4 {
+			padding: 100px 0 0 80px;
+			border: 2px solid navy;
+		}
+
+		.block {
+			display: block;
+		}
+
+		.string {
+			display: inline;
+		}
 
 	</style>
 	</head>
@@ -19,9 +56,61 @@
 		<h1>Это второй тег H1</h1>
 		<h2>Yo!!!! Hellow WORLD! 2</h2>
 		<h3>Yo!!!! Hellow WORLD! 3</h3>
-		<h4>Yo!!!! Hellow WORLD! 4</h4>
-		<h5>Yo!!!! Hellow WORLD! 5</h5>
-		<h6>Yo!!!! Hellow WORLD! 6</h6>
+		<h4 >Yo!!!! Hellow WORLD! 4</h4>
+		<h5 >Yo!!!! Hellow WORLD! 5</h5>
+		<h6 >Yo!!!! Hellow WORLD! 6</h6>
+
+		<!--h1 class="string" style="color: blue;">Yo!!!! Hellow WORLD! 1</h1>
+		<h1 class="string">Это второй тег H1</h1>
+		<h2 class="string">Yo!!!! Hellow WORLD! 2</h2>
+		<h3 class="string">Yo!!!! Hellow WORLD! 3</h3>
+		<h4 class="string">Yo!!!! Hellow WORLD! 4</h4>
+		<h5 class="string">Yo!!!! Hellow WORLD! 5</h5>
+		<h6 class="string">Yo!!!! Hellow WORLD! 6</h6-->
+
+		<!-- НАЧАЛО пример плохой верстки "сломанной", нельзя ставить блочный элемент внутри параграфа, потому что ломается верстка -->
+	<p>
+		Несмотря на то что еще накануне стоимость нефти Brent превысила $43, цена на нее в ближайшие недели может вернуться к $35 за баррель, сообщает Reuters со ссылкой на прогноз американского инвестбанка Goldman Sachs.
+
+		<div>Компания указывает, что цена снизится из-за неопределенности относительно того, каким будет дальнейший спрос, и «пугающих» запасов топлива.</div>
+
+		цена на нее в ближайшие недели может вернуться к $35 за баррель, сообщает Reuters со ссылкой на прогноз американского инвестбанка Goldman Sachs.
+	</p>
+		<!-- КОНЕЦ пример плохой верстки "сломанной", нельзя ставить блочный элемент внутри параграфа, потому что ломается верстка -->
+
+
+
+
+
+
+		<div>Компания указывает, что цена снизится из-за неопределенности относительно того,
+
+			<div>Компания указывает, что цена снизится из-за неопределенности относительно того,
+
+				<br><br>
+				<ul start="1345" type="square" style="margin-left:100px">
+					<li>опция номер 1 - 1345</li>
+					<li>опция номер 2</li>
+					<li>опция номер 3</li>
+					<li>опция номер 4</li>
+				</ul>
+				<br><br>
+				каким будет дальнейший спрос, и «пугающих» запасов топлива.</div>
+
+
+			каким будет дальнейший спрос, и «пугающих» запасов топлива.</div>
+
+
+
+
+		<div class="sp1" style="color: blueviolet;">Какой-то текст 1 по спицифичности</div>
+		<div>Какой-то текст 2 по спицифичности</div>
+
+		<div class="padding-4">
+			DIV with parent selector<br>
+			<!--Lorem ipsum dolor sit amet, <p><span>consectetur adipiscing elit</span></p>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+		 -->
+		</div>
 
 		<div class="red-border">
 			DIV with parent selector<br>
@@ -29,8 +118,7 @@
 		</div>
 
 		<br>
-		<a class="personal_link" href="http://mail.ru">ссылка на mail.ru</a>
-		<br>
+		<a class="personal_link block" href="http://mail.ru">ссылка на mail.ru</a>
 		<a class="personal_link" href="http://yandex.ru">ссылка на yandex.ru</a>
 		<br>
 		<a class="personal_link" href="http://apple.ru">ссылка на apple.ru</a>
