@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+	<style>
+* {
+		box-sizing: border-box;
+}
+
+	.form-input {
+	  background-color: #fff;
+		border: 1px solid #ced4da;
+		border-radius: 2px;
+		padding: 5px;
+		display: inline-block;
+		width: 100%;
+		position: relative;
+	}
+
+  .form-input input[type=text], input[type=email] {
+			border: 0;
+			outline: none;
+			color: #495057;
+			font-size: 1rem;
+			font-weight: 400;
+	  	width: calc(100% - 26px);
+	}
+
+	.container {
+			display: flex;
+	}
+	.width50 {
+			max-width: 50%;
+			width: 100%;
+			margin-right: 10px;
+	}
+	.search {
+			position: absolute;
+			top: 8px;
+			right: 10px;
+	  	color: #495057;
+			cursor: pointer;
+	}
+
+	.super-search{
+			display: flex;
+			width: calc(100% - 100px);
+	}
+
+	.super-search .input-search {
+		width: 50%;
+		height: 50px;
+		border: #495057 1px solid;
+		position: relative;
+	}
+
+	.super-search .search {
+		position: absolute;
+		top: 8px;
+		left: 10px;
+		color: #495057;
+		cursor: pointer;
+		font-size: 26px;
+		display: inline-block;
+		width: 40px;
+	}
+ .super-search input {
+		width: calc(100% - 40px);
+	 	margin-left: 40px;
+	 	font-size: 26px;
+		 border: 0;
+		 margin-top: 10px;
+		 outline: none;
+
+ }
+
+
+.super-search .drop-down {
+	display: flex;
+	flex-direction: column;
+	width: calc(50% - 150px);
+	border: #ff7112 1px solid;
+	position: relative;
+
+ }
+
+.super-search .drop-down input {
+		font-size: 20px;
+		font-weight: bold;
+		margin-top: 0;
+		margin-left: 5px;
+}
+
+.super-search .drop-down label {
+	font-size: 14px;
+	margin-left: 5px;
+	color: #aaaaaa;
+}
+
+.super-search .drop-down .chevron {
+	position: absolute;
+	top: 16px;
+	right: 10px;
+	color: #495057;
+	cursor: pointer;
+}
+.super-search .button {
+		background-color: darkseagreen;
+		border: 1px solid darkseagreen;
+		color: #ced4da;
+		font-size: 30px;
+		width: 150px;
+}
+
+
+.super-search .drop-down .list {
+	border: 1px solid #ced4da;
+	position: absolute;
+	top: 48px;
+	left: 0px;
+	/* display: flex; */
+	flex-direction: column;
+	width: 100%;
+	display: none;
+}
+
+.super-search .drop-down .list span {
+		padding: 5px 0 5px 5px;
+		font-size: 20px;
+		border-bottom: 1px solid #aaaaaa;
+		cursor: pointer;
+		user-select: none;
+}
+.super-search .drop-down .list span:last-child {
+	border-bottom: 0;
+}
+
+.super-search .drop-down .list span:hover {
+	background-color: #aaaaaa;
+}
+
+
+
+.scrollbar
+{
+	margin-left: 30px;
+	float: left;
+	height: 300px;
+	width: 50%;
+	background: #F5F5F5;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+}
+
+.force-overflow
+{
+	min-height: 450px;
+}
+
+#wrapper
+{
+	text-align: center;
+	width: 500px;
+	margin: auto;
+}
+#style-3::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#style-3::-webkit-scrollbar
+{
+	width: 4px;
+	background-color: #F5F5F5;
+}
+
+#style-3::-webkit-scrollbar-thumb
+{
+	background-color: #888888;
+}
+
+
+
+</style>
+</head>
+<body style="padding: 40px">
+
+	<br><br>
+	<h1>Custom Elements</h1>
+	<br>
+	<h3>Custom Input</h3>
+
+	<input type="text" value="some text">
+	<br><br>
+
+	<div class="container">
+		<div class="width50">
+			<div class="form-input">
+				<input type="text" value="some text">
+			</div>
+
+		</div>
+		<div class="width50">
+			<div class="form-input">
+				<input type="email" value="some text">
+			</div>
+
+		</div>
+	</div>
+<br><br>
+	<div class="container">
+		<div class="width50">
+			<div class="form-input">
+				<input type="text" value="some text">
+				<i class="fas fa-search search"></i>
+			</div>
+		</div>
+	</div>
+
+<br><br>
+	<div class="container">
+		<div class="super-search">
+			<div class="input-search">
+				<i class="fas fa-search search"></i>
+				<input type="text" value="some text">
+
+			</div>
+			<div class="drop-down">
+				<label>Подсказка</label>
+				<input readonly type="text" value="some text">
+				<i class="fas fa-chevron-down chevron"></i>
+				<div class="list">
+					<span>Раздел 1</span>
+					<span>Раздел 2</span>
+					<span>Раздел 3</span>
+					<span>Раздел 4</span>
+				</div>
+			</div>
+			<button type="button" class="button">Искать</button>
+		</div>
+	</div>
+
+	<br><br>
+
+	<button id="counter1">Count 1</button><br>
+	<button id="counter2">Count 2</button>
+
+	<br><br>
+
+	<div class="scrollbar" id="style-3">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem deleniti accusantium quasi ab ad officia cupiditate sed aliquam nobis expedita velit dolorum perspiciatis pariatur nam vero et magnam soluta tempora!
+		Eveniet deserunt consequatur porro molestiae nulla optio quis totam libero iste nemo odit eum facilis sapiente. Harum similique cupiditate voluptas ea optio sunt molestias eius ab qui obcaecati nesciunt id?
+		Necessitatibus delectus sint vitae eos quasi optio esse dignissimos enim laborum ipsum harum perspiciatis eaque. Magnam fugiat delectus neque laboriosam in accusamus a veniam inventore asperiores consequatur nihil quae quo.
+		Eligendi quaerat nesciunt sint nobis qui? Temporibus maiores esse molestiae hic cum culpa sed recusandae dolore sequi modi. Quos illum debitis odio consequatur voluptatum error aliquam rem similique officia recusandae.
+		Ex suscipit earum reiciendis eaque dolorem inventore accusantium modi voluptatum saepe cum quam tempora autem corrupti illum deleniti iure rerum mollitia quo ducimus soluta ea! Illum aliquid consectetur vitae quod?
+		Minus rem tempora quo. Deleniti mollitia dignissimos laborum quis quos facilis dolore soluta error provident recusandae veniam minus consequatur blanditiis. Facere tempore praesentium soluta fugiat quia eligendi dolores ullam doloribus!
+		Aut nulla perferendis officiis accusamus ut aspernatur hic possimus amet blanditiis incidunt repudiandae ullam inventore ipsam recusandae nihil provident facilis totam quibusdam natus eligendi optio quia sapiente rerum quos illo?
+		Porro soluta nisi impedit voluptatem ex accusantium facilis amet quod blanditiis quia similique totam enim id ratione minus quo modi sequi nam dicta iste aliquid itaque velit accusamus quibusdam consequuntur.
+		Ab assumenda in ad nesciunt recusandae labore voluptates vero suscipit tenetur ullam sint beatae odio harum quo aperiam quas temporibus pariatur consectetur saepe eveniet minus voluptatem atque iusto similique repudiandae?
+	</div>
+
+
+
+
+<script>
+	var chevron = document.querySelector('.drop-down .fa-chevron-down.chevron');
+
+
+  chevron.addEventListener('click', prepareHandleChevron());
+  document.getElementById('counter1').addEventListener('click', prepareButtonClick());
+  document.getElementById('counter2').addEventListener('click', prepareButtonClick());
+
+
+	function prepareHandleChevron() {
+	  var isOpened = false;
+
+	  console.log("prepare = ", isOpened)
+	  return function handleChevronClick(e) {
+      var buttonIcon = e.target;
+
+      if (isOpened) { // если дроп-даун открыт
+        buttonIcon.classList.remove('fa-chevron-up');
+        buttonIcon.classList.add('fa-chevron-down');
+			} else {
+        buttonIcon.classList.remove('fa-chevron-down');
+        buttonIcon.classList.add('fa-chevron-up');
+			}
+
+      var list = buttonIcon.closest('div.drop-down').querySelector('.list');
+      list.style.display = isOpened ? 'none' : 'flex';
+
+      isOpened = !isOpened;
+    }
+	}
+
+
+	function prepareButtonClick() {
+	  var cnt = 0;
+
+	  return function (e) {
+	    var item = e.target;
+
+      cnt++;
+      console.log("кликнули по кнопке", item.getAttribute('id'), ", cnt = ", cnt);
+      item.innerText = cnt;
+		}
+	}
+
+
+</script>
+</body>
+</html>
